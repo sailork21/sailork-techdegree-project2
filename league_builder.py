@@ -11,7 +11,7 @@ def dict_create():
         player_reader = csv.reader(soccer_players, delimiter=',')
         rows = list(player_reader)
         del rows[0]
-        """ This part counts players and divides them into 3 equal teams. It
+        """ This part counts players and divides them into teams. It
         also makes sure the players with experience are equally divided.
         """
         player_count = 0
@@ -41,8 +41,8 @@ def dict_create():
     soccer_players.close()
 
 def print_file(league):
-    """This function takes the lists made in dict_create and prints them to
-    # one text file.
+    """This function takes the dictionary made in dict_create and prints them to
+    one text file.
     """
     team_list = open("teams.txt", "+w")
     for team in league.keys():
@@ -55,7 +55,7 @@ def print_file(league):
 
 
 def letters(league):
-    """This function takes the lists from dict_create and creates new text
+    """This function takes the dictionary from dict_create and creates new text
     files with the names of the players and writes a note to the guardians
     in the text file.
     """
